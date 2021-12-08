@@ -121,7 +121,7 @@ function onapp1 () {
    echo -e "\n\033[1;32mINICIANDO O ONLINE APP... \033[0m"
    echo ""
    apt install apache2 -y > /dev/null 2>&1
-   sed -i "s/Listen 80/Listen 8888/g" /etc/apache2/ports.conf >/dev/null 2>&1
+   sed -i "s/Listen 80/Listen 8877/g" /etc/apache2/ports.conf >/dev/null 2>&1
    service apache2 restart
    rm -rf /var/www/html/server >/dev/null 2>&1
    mkdir /var/www/html/server >/dev/null 2>&1
@@ -135,7 +135,7 @@ function onapp1 () {
    IP=$(wget -qO- ipv4.icanhazip.com) >/dev/null 2>&1
    echo -e "\n\033[1;32m  ONLINE APP ATIVO !\033[0m"
    echo -e "\033[1;31m \033[1;33mURL de Usuários Online para usar no App\033[0m"
-   echo -e " http://$IP:8888/server/online"
+   echo -e " http://$IP:8877/server/online"
    sleep 10
    menu
 }
@@ -225,7 +225,7 @@ _userexp=$(printf '%-5s' "$_expuser")
 _tuser=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody | wc -l)
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[41;1;37m       ⇱ SSHPLUS MANAGER Edit:@kiritosshxd⇲       \E[0m"
+echo -e "\E[41;1;37m       ⇱              MANAGER              ⇲       \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\033[1;32mSISTEMA            MEMÓRIA RAM      PROCESSADOR "
 echo -e "\033[1;31mOS: \033[1;37m$_system \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
@@ -343,7 +343,7 @@ _userexp=$(printf '%-5s' "$_expuser")
 _tuser=$(awk -F: '$3>=1000 {print $1}' /etc/passwd | grep -v nobody | wc -l)
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[41;1;37m       ⇱ SSHPLUS MANAGER Edit:@kiritosshxd⇲       \E[0m"
+echo -e "\E[41;1;37m       ⇱              MANAGER              ⇲       \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\033[1;32mSISTEMA            MEMÓRIA RAM      PROCESSADOR "
 echo -e "\033[1;31mOS: \033[1;37m$_system \033[1;31mTotal:\033[1;37m$_ram \033[1;31mNucleos: \033[1;37m$_core\033[0m"
