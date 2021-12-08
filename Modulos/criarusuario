@@ -268,15 +268,15 @@ echo -ne "\033[1;32mNome do usuário:\033[1;37m ";read username
 	exit 1
 }
 sizemin=$(echo ${#username})
-[[ $sizemin -lt 2 ]] && {
+[[ $sizemin -lt 1 ]] && {
 	echo -e "\n${cor1}Você digitou um nome de usuário muito curto${scor}"
-	echo -e "${cor1}use no mínimo dois caracteres!${scor}\n"
+	echo -e "${cor1}use no mínimo 1(um) caracteres!${scor}\n"
 	exit 1
 }
 sizemax=$(echo ${#username})
-[[ $sizemax -gt 10 ]] && {
+[[ $sizemax -gt 40 ]] && {
 	echo -e "\n${cor1}Você digitou um nome de usuário muito grande"
-	echo -e "${cor1}use no máximo 10 caracteres!${scor}\n"
+	echo -e "${cor1}use no máximo 40 caracteres!${scor}\n"
 	exit 1
 }
 echo -ne "\033[1;32mSenha:\033[1;37m ";read password
@@ -285,8 +285,8 @@ echo -ne "\033[1;32mSenha:\033[1;37m ";read password
 	exit 1
 }
 sizepass=$(echo ${#password})
-[[ $sizepass -lt 4 ]] && {
-	echo -e "\n${cor1}Senha curta!, use no mínimo 4 caracteres${scor}\n"
+[[ $sizepass -lt 1 ]] && {
+	echo -e "\n${cor1}Senha curta!, use no mínimo 1(um) caracteres${scor}\n"
 	exit 1
 }
 echo -ne "\033[1;32mDias para expirar:\033[1;37m ";read dias
